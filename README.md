@@ -1,2 +1,2 @@
 # AresPdfKit
-A high-performance cross-platform PDF SDK for viewing, rendering, and advanced document manipulation.
+For any issues, please create an issue here.
