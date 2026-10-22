@@ -1,7 +1,6 @@
 {
   "name": "ares_pdf",
   "version": "2.0.0",
-  "publish_to": "none",
   "description": "Documentation metadata for the Ares Flutter PDF API and viewer/editor on six platforms.",
   "homepage": "https://aresdefencelabs.com/",
   "repository": "https://github.com/Ares-Defence-Labs/AresPdfKit",
