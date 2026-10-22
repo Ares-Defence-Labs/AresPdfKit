@@ -1,0 +1,10 @@
+{
+  "name": "ares_pdf",
+  "version": "2.0.0",
+  "publish_to": "none",
+  "description": "Documentation metadata only for the locally prepared Ares PDF SDK. This repository is not an installable Flutter package.",
+  "homepage": "https://aresdefencelabs.com/",
+  "repository": "https://github.com/Ares-Defence-Labs/AresPdfKit",
+  "issue_tracker": "https://github.com/Ares-Defence-Labs/AresPdfKit/issues",
+  "documentation": "https://github.com/Ares-Defence-Labs/AresPdfKit/tree/main/docs"
+}
