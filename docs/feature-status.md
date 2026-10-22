@@ -1,6 +1,6 @@
 # Feature coverage and remaining work
 
-Status: 22 October 2026. Local and unpublished. This is not a full parity claim.
+Version 2.0.0 documents the bounded feature set below. Full parity is deferred to the next release.
 
 The current public contract has 89 documented types, 29 viewer tools and nine
 typed host callbacks. Low-level API and viewer share the compiled processing
@@ -36,7 +36,7 @@ applicable. Processing-only and compiled-component checks remain distinct from
 public consumer acceptance.
 
 Windows is compiled/preflight only. Native macOS UI, positive paid activation,
-physical devices, wider browsers and hardware/GPU coverage remain pending.
+broader physical devices, wider browsers and hardware/GPU coverage remain pending. Samsung and iPhone import/signing/export and genuine expiry checks passed.
 
 ## Substantial unfinished families
 
@@ -54,4 +54,4 @@ them from ordinary timestamp or OCSP support.
 The capability-family ledger still has 52 families, with some implementation in
 41 and no implementation in 11. None is fully accepted on all six platforms.
 This is not an exhaustive member inventory or a reliable effort-based percentage.
-Publication readiness stays false while the required gates remain unresolved.
+Windows runtime and macOS foreground UI remain explicitly unverified under the owner-approved v2 release limits.

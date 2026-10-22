@@ -2,6 +2,8 @@
 
 # AresPdfKit
 
+**Current release:** [ares_pdf 2.0.0](https://pub.dev/packages/ares_pdf/versions/2.0.0).
+
 **PDF document APIs. An editor that fits your app.**
 
 Flutter PDF SDK from **Ares Defence Labs**: create and manipulate documents
@@ -23,8 +25,10 @@ One SDK, two integration modes, six Flutter targets.
 
 ## Choose your integration
 
-**Preparation status:** local and unpublished. The documented compiled candidate
-has bounded feature coverage; full parity and production acceptance remain open.
+**v2.0.0 release scope:** the documented feature set below. Full Syncfusion
+parity is deferred to the next release. Windows native runtime and macOS
+foreground UI testing remain unverified for this version; the owner approved
+publication with these limits explicitly documented.
 See [feature coverage](docs/feature-status.md) and [platform verification](docs/platforms.md).
 
 | Integration | Entry point | Build your workflow |
@@ -149,11 +153,12 @@ AresPdfViewer(
 
 ## Platforms and licence
 
-Android, iOS, macOS, Linux, Windows and Web have compiled members. Local candidate
-checks executed Android emulator, iOS Simulator with SwiftPM/CocoaPods, macOS
-programmatic checks, Linux debug/profile/release under containers/emulation and
-Web in the in-app browser. **Windows runtime, macOS foreground UI, physical
-devices and positive paid activation remain pending.** See [platforms](docs/platforms.md).
+Android, iOS, macOS, Linux, Windows and Web have compiled members. Verification includes Samsung and iPhone devices, a 16 KB Android kernel,
+iOS Simulator with SwiftPM/CocoaPods, macOS programmatic checks, Linux
+debug/profile/release under containers/emulation and Web in the in-app browser.
+Sandbox customer-package activation checks cover paid API/viewer operations
+after real trial expiry. **Windows runtime and macOS foreground UI remain
+unverified for v2.0.0.** See [platforms](docs/platforms.md).
 
 Production SDK use requires the commercial SDK terms and a
 valid signed portal key. Missing, invalid or expired keys use the compiled trial

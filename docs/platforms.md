@@ -1,12 +1,12 @@
 # Platform setup and verification scope
 
-The current candidate requires Dart `^3.12.0` and Flutter `>=3.47.0`. These are
-actual candidate constraints, not compatibility promises for older Flutter.
+Version 2.0.0 requires Dart `^3.12.0` and Flutter `>=3.47.0`. These are
+package constraints, not compatibility promises for older Flutter.
 
 | Platform | Prepared member | Local verification | Still pending |
 | --- | --- | --- | --- |
-| Android | Flutter plugin with compiled Core/viewer | ARM64 emulator, actual app-owned accessibility controls and API/viewer workflows | Physical devices and broader device/ABI acceptance |
-| iOS | Compiled frameworks/native viewer | Simulator; SwiftPM and CocoaPods consumers; XCTest controls | Physical devices and general OS/device coverage |
+| Android | Flutter plugin with compiled Core/viewer | Physical Samsung ARM64 and actual 16 KB kernel emulator; native controls and API/viewer workflows; ELF/ZIP alignment checks | Broader device/ABI acceptance |
+| iOS | Compiled frameworks/native viewer | Simulator with SwiftPM and CocoaPods; physical iPhone release-mode host with XCTest controls, signing and export | General OS/device coverage and physical gesture matrix |
 | macOS | Universal compiled frameworks/native plugin | ARM64 programmatic API/viewer plus native offscreen component checks | Foreground UI/gestures/Export at user request; physical Intel acceptance |
 | Linux | Compiled native plugin/Core | Debug/profile/release Flutter x64 in local Docker/emulation; native ARM64/x64 component checks | User hardware/desktop/window-manager/GPU acceptance; registered ARM64 Flutter delivery |
 | Windows | x64 compiled native members and public Dart test kit | Cross-compilation/import audit and Dart bundle preflight | Windows native app/runtime, dialogs, gestures, accessibility and hardware |
@@ -45,7 +45,12 @@ assets. Do not move runtime files independently or rename asset namespaces.
 
 ## Acceptance limits
 
-Positive paid activation, physical-device verification and broader UI coverage
-remain separate from the passing trial-mode tests. Cleanup proves tracked
+Physical Samsung and iPhone runs include real trial expiry and independent output
+inspection. Paid activation is checked separately from trial-mode workflows.
+Windows runtime and macOS foreground UI remain unverified in v2.0.0 by an explicit
+owner-approved release exception; they are not recorded as passed. Broader
+hardware and gesture coverage remains pending. Cleanup proves tracked
 ownership drains; it does not prove immediate GPU allocation destruction.
 See [feature status](feature-status.md) for the remaining functionality gaps.
+
+The verified publisher for all three coordinated packages is `aresdefencelabs.com`.

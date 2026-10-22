@@ -29,11 +29,12 @@ context. It does not trust caller booleans, app-ID overrides, a callback verdict
 or a Dart-selected clock. Editing a key's dates/claims invalidates its signature.
 No licensing API call is required for normal local verification.
 
-Positive paid/owner activation and physical-device acceptance remain release
-gates for the current candidate. Do not infer a production acceptance result
-from public-key presence or successful trial-mode operations. Sandbox keys need
-a properly sandbox-trusted test build; production builds must not substitute
-their public key just to accept sandbox data.
+Paid API and viewer operations were checked after real trial expiry using an
+existing purchased sandbox key and an isolated sandbox-trusted customer-package
+QA build. This QA build is never shipped. Shipping packages keep their production
+trust pin and must reject sandbox-issued keys. No production purchase is needed
+for these checks. Physical Samsung and iPhone trial/import/signing/export runs
+are separate evidence; see the [platform verification limits](platforms.md).
 
 ## Trial behavior
 

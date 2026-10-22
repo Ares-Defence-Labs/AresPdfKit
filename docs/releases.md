@@ -1,41 +1,37 @@
 # Releases and package distribution
 
-No PDF SDK version is published by this local preparation. This public repository
-is documentation/support only; its metadata pubspec is not an installable SDK.
-The reviewed SDK package will contain documented Dart contracts, compiled members,
-required Web assets, third-party notices and a runnable example.
+Version 2.0.0 covers the [documented feature set](feature-status.md). Full
+Syncfusion parity is deferred to the next release. Windows runtime and macOS
+foreground UI remain [explicitly unverified](platforms.md) under the owner's
+version-specific approval. Unverified tests are never marked passed.
 
-## Planned release flow
+The verified publisher is **aresdefencelabs.com**. There are three coordinated
+hosted packages: `ares_pdf_protected_web`, `ares_pdf_protected_desktop`, then
+`ares_pdf`. Developers add only `ares_pdf` directly. Exact matching runtime
+versions prevent binary/contract drift.
 
-The private source repository prepares native/Web builds and verifies the exact
-candidate. Release automation follows the existing Edge model: validated
-changelog, authorized immutable version tag, private ephemeral runner, private
-artifacts, pub.dev OIDC publication and public documentation synchronization only
-after the registry confirms the release. The local PDF configuration is disabled.
+The public Git repository contains documentation and support material. Its
+metadata pubspec is not an installable SDK. The pub.dev packages contain the
+public Dart contracts, compiled native/Wasm runtimes, notices and example.
+The SDK uses approved commercial terms; documentation retains separate MIT terms.
 
-There are three coordinated hosted members. Publish runtime dependencies first,
-then the customer-facing `ares_pdf` facade, using exact matching versions and
-reviewed inventories. Developers still add only `ares_pdf` directly.
+Private release assembly binds source snapshots, compiled inventories, genuine
+runtime evidence, dependency notices and approved version scope. Cloudflare
+validates signed GitHub webhooks and requires a separately recorded owner
+approval of the immutable release SHA and exact review digest. Runner credentials
+and GitHub release Apps cannot create that approval through pipeline APIs.
+GitHub environment-required reviewers are unavailable on the current plan;
+the independent Cloudflare approval is the enforced publication gate.
 
-Activation requires separate configuration of the private GitHub workflow,
-scoped Apps/runner, Cloudflare Worker/D1/Queues/webhook/secrets and pub.dev package
-automation. Writing configuration files locally does not connect remote accounts
-or create those resources. No deployment or activation is performed by these docs.
+Initial package publication requires an authenticated manual bootstrap before
+GitHub OIDC can be configured. Each package's company publisher ownership is
+verified separately. Future automation uses the private repository, exact version
+tag pattern and `pub.dev` environment, without a long-lived pub.dev token.
+Registry confirmation gates public documentation/tag/release synchronization.
 
-## Publishing prerequisites
+Never include a customer licence string, document identity, issuer private key,
+source map or debug symbol in public release inputs. Never replace or retarget
+an immutable published version. See [Dart publishing](https://dart.dev/tools/pub/publishing)
+and [automated publishing](https://dart.dev/tools/pub/automated-publishing).
 
-Final SDK licence terms, dependency redistribution review, complete requested
-feature acceptance and outstanding platform/paid-activation checks must close
-before the package is presented as ready. The current source's placeholder SDK
-licence is not a publishable legal file. The public documentation MIT licence
-does not replace the SDK terms or third-party notices.
-
-Pub.dev currently requires an initial manual publication before automated OIDC
-publishing can be configured. Each member needs its own matching package/tag
-authorization. See [Dart automated publishing](https://dart.dev/tools/pub/automated-publishing)
-and [publishing requirements](https://dart.dev/tools/pub/publishing).
-
-Release preparation keeps `publish_to: none`, publication flags disabled and
-private artifacts out of this public repository. No real customer licence,
-document identity, issuer private key, source map or debug symbol may be exported.
-Never replace or retarget a published package version/tag.
+The public SDK version is **2.0.0**. Its exact runtime dependencies are Web **2.0.0** and Desktop **2.0.1**. The Desktop packaging patch preserves original macOS framework signatures and symlinks inside local ZIP artifacts; no native implementation or licence trust pin changes. Runtime component patch versions can differ from the public SDK version. Future release reviews must select unused component versions before uploading.
